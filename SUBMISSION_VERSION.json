@@ -1,0 +1,14 @@
+{
+  "submitted_archive_sha256": "a0ee9fe4ca854ba1a3ccece4626d446d09f9bd444539ca4462d1db3bc4268724",
+  "deployment_status": "not deployed",
+  "added_files": [
+    "requirements-deploy.txt",
+    "config/production.py",
+    "config/wsgi.py",
+    "seed_demo.py",
+    "start-render.sh",
+    "render.yaml",
+    "DEPLOYMENT.md",
+    "SUBMISSION_VERSION.json"
+  ]
+}

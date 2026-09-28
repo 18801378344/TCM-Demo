@@ -1,0 +1,4 @@
+-r requirements.txt
+gunicorn>=23,<24
+dj-database-url>=2.3,<4
+psycopg[binary]>=3.2,<4

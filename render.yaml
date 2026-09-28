@@ -1,0 +1,27 @@
+databases:
+  - name: tcm-demo-db
+    plan: free
+    region: frankfurt
+services:
+  - type: web
+    name: tcm-literature-demo
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -r requirements-deploy.txt
+    startCommand: sh start-render.sh
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: DJANGO_SETTINGS_MODULE
+        value: config.production
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DEMO_PASSWORD_1
+        sync: false
+      - key: DEMO_PASSWORD_2
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tcm-demo-db
+          property: connectionString

@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<h1>{{ document.title }}</h1><p>Source: {{ document.source|default:"Not supplied" }}</p><h2>Abstract</h2><p class="abstract">{{ document.abstract|default:"No abstract supplied." }}</p>{% endblock %}
