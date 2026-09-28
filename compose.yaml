@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DATABASE_PATH: /data/db.sqlite3
+    volumes:
+      - demo_data:/data
+volumes:
+  demo_data:

@@ -1,0 +1,5 @@
+# Draft code sample description
+
+Use only after reviewing and understanding the code. Update the contribution statement to reflect your actual review and changes. This text is below 150 words.
+
+This is a new Django demonstration inspired by the upload usability problem I encountered in TCM Miner. It provides authenticated CSV import, actionable validation errors and user-specific literature records. A key design decision is to validate the whole batch before transactional persistence, preventing partial imports when a later record fails. Tests cover invalid inputs, rollback, ownership isolation, CSRF enforcement and escaped rendering. Please review documents/services/import_csv.py, documents/views.py and the tests. I supplied the project requirements and background; OpenAI Codex generated the implementation and tests using Django's official documentation patterns. My subsequent review and modifications should be described here before submission. The sample uses synthetic records and is intended for local evaluation, not production deployment.
